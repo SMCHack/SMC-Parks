@@ -66,6 +66,48 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   });
+
+      //SMC-Park routes/states goes here
+      $stateProvider.state('app.info', {
+        url: "/info",
+        views: {
+          'menuContent': {
+            templateUrl: "templates/info.html",
+            controller: 'ParkInfoCtrl'
+          }
+        }
+      });
+
+      $stateProvider.state('app.filters', {
+        url: "/filters",
+        views: {
+          'menuContent': {
+            templateUrl: "templates/filters.html",
+            controller: 'ParkFiltersCtrl'
+          }
+        }
+      });
+
+      $stateProvider.state('app.alerts', {
+        url: "/alerts",
+        views: {
+          'menuContent': {
+            templateUrl: "templates/alerts.html",
+            controller: 'ParkAletrsCtrl'
+          }
+        }
+      });
+
+      $stateProvider.state('app.report', {
+        url: "/report",
+        views: {
+          'menuContent': {
+            templateUrl: "templates/report.html",
+            controller: 'ParkReportCtrl'
+          }
+        }
+      });
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
 });

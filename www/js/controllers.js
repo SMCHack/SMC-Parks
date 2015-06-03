@@ -53,4 +53,21 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+})
+
+    //SMC-Parks Controller goes here
+    .controller('ParkInfoCtrl', function($scope, $stateParams){
+
+    })
+
+    .controller('ParkFiltersCtrl', function($scope, $stateParams){
+
+    })
+
+    .controller('ParkAletrsCtrl', function($scope, $stateParams){
+
+    })
+
+    .controller('ParkReportCtrl', function($scope, $stateParams){
+
+    });
