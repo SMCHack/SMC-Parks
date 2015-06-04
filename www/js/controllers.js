@@ -64,10 +64,16 @@ angular.module('starter.controllers', [])
 
     })
 
-    .controller('ParkAletrsCtrl', function($scope, $stateParams){
+    .controller('ParkAlertsCtrl', function($scope, $stateParams){
 
     })
 
-    .controller('ParkReportCtrl', function($scope, $stateParams){
-
+    .controller('ParkReportCtrl', function($scope, $stateParams,Camera){
+         $scope.getPhoto = function() {
+            Camera.getPicture().then(function (imageURI) {
+            console.log(imageURI);
+            }, function (err) {
+            console.err(err);
+          });
+       }
     });

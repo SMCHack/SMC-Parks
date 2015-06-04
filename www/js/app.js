@@ -93,7 +93,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         views: {
           'menuContent': {
             templateUrl: "templates/alerts.html",
-            controller: 'ParkAletrsCtrl'
+            controller: 'ParkAlertsCtrl'
           }
         }
       });
