@@ -56,12 +56,16 @@ angular.module('starter.controllers', [])
 })
 
     //SMC-Parks Controller goes here
-    .controller('ParkInfoCtrl', function($scope, $stateParams){
-
+    .controller('ParkInfoCtrl', function($scope, $stateParams, leafletData){
+        /*leafletData.getMap().then(function(map) {
+            L.GeoIP.centerMapOnPosition(map, 15);
+        });*/
     })
 
-    .controller('ParkFiltersCtrl', function($scope, $stateParams){
-
+    .controller('ParkFiltersCtrl', function($scope, $stateParams, FilterService){
+        $scope.byLocation = FilterService.getAllByLocation();
+        $scope.byActivity = FilterService.getAllByActivity();
+        $scope.byTrailUsage = FilterService.getAllByTrailUsage();
     })
 
     .controller('ParkAlertsCtrl', function($scope, $stateParams){

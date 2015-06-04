@@ -1,5 +1,31 @@
 <ion-view view-title="Filters">
     <ion-content>
-        <h1>Filters</h1>
+        <div class="item item-divider">
+            By Location
+        </div>
+        <ion-list>
+            <ion-item ng-repeat="category in byLocation" href="#/app/parks/{{category.id}}">
+                {{category.name}}
+            </ion-item>
+        </ion-list>
+
+        <div class="item item-divider">
+            By Activity
+        </div>
+        <ion-list>
+            <ion-item ng-repeat="category in byActivity" href="#/app/parks/{{category.id}}">
+                {{category.name}}
+            </ion-item>
+        </ion-list>
+
+        <div class="item item-divider">
+            By Train Usage
+        </div>
+        <ion-list>
+            <ion-item ng-repeat="category in byTrailUsage" href="#/app/parks/{{category.id}}">
+                {{category.name}}
+            </ion-item>
+        </ion-list>
+
     </ion-content>
 </ion-view>
